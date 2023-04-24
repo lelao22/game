@@ -47,8 +47,34 @@ function getWeightedRandomNumber() {
 }
 
 function updateBalance(payout) {
-	const balanceDisplay = document.getElementById('balance');
-	const currentBalance = Number(balanceDisplay.textContent);
-	const newBalance = currentBalance + payout;
-	balanceDisplay.textContent = newBalance;
+    const balanceDisplay = document.getElementById('balance');
+    if (balanceDisplay !== null) {
+      const currentBalance = Number(balanceDisplay.textContent);
+      const newBalance = currentBalance + payout;
+      balanceDisplay.textContent = newBalance;
+    }
+  }
+  
+// Seleciona a div resultado
+const resultadoDiv = document.getElementById('resultado');
+
+// Define a aposta do jogador
+const aposta = 2;
+
+// Gera um número aleatório entre 0 e 6
+const numeroSorteado = Math.floor(Math.random() * 7);
+
+// Define se o jogador ganhou ou perdeu
+let resultado = '';
+if (aposta < 4 && numeroSorteado < 4) {
+  resultado = 'Você ganhou!';
+} else if (aposta >= 4 && numeroSorteado >= 4) {
+  resultado = 'Você ganhou!';
+} else if (aposta === 0 && numeroSorteado === 0) {
+  resultado = 'Você ganhou!';
+} else {
+  resultado = 'Você perdeu!';
 }
+
+// Insere o resultado na div resultado
+resultadoDiv.innerText = resultado;
