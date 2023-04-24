@@ -1,10 +1,11 @@
 const rollButton = document.getElementById('roll-button');
 rollButton.addEventListener('click', function() {
-  const dice = document.querySelector('.dice');
+    const dice = document.querySelector('#dice-board .dice');
   const betType = document.querySelector('input[name="bet-type"]:checked').value;
   const betAmount = document.getElementById('bet-amount').value;
   let payout = 0;
   const randomNumber = getWeightedRandomNumber();
+
 
   dice.textContent = randomNumber;
 
@@ -48,3 +49,8 @@ function updateBalance(payout) {
   const newBalance = currentBalance + payout;
   balanceDisplay.textContent = newBalance;
 }
+const placeBetButton = document.getElementById('place-bet');
+placeBetButton.addEventListener('click', function() {
+  const betAmount = document.getElementById('bet-amount').value;
+  updateBalance(-betAmount);
+});
