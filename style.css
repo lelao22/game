@@ -1,0 +1,73 @@
+/* Estilos do tabuleiro do jogo */
+#game-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #dice-board {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dice {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Estilos da área de apostas */
+  #betting-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  #betting-area label {
+    margin-right: 10px;
+  }
+  
+  #betting-area input[type="number"] {
+    width: 50px;
+  }
+  
+  /* Estilos do painel de controle */
+  #control-panel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #roll-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #roll-button:hover {
+    background-color: #3E8E41;
+  }
+  
+  /* Animação do dado */
+  .roll {
+    animation: roll 1s ease-in-out forwards;
+  }
+  
+  @keyframes roll {
+     0% { transform: translateZ(-200px) rotateX(-360deg) rotateY(0); }
+     100% { transform: translateZ(-200px) rotateX(-360deg) rotateY(-360deg); }
+  }
+  
