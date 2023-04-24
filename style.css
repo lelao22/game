@@ -8,18 +8,18 @@
 }
 
 .dice {
-	height: 200px;
-	width: 200px;
-	background-color: white;
-	border: 5px solid black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 100px;
-	font-weight: bold;
-	animation: roll-dice 1s ease-in-out;
-	transform-style: preserve-3d;
-}
+    width: 100px !important;
+    height: 100px !important;
+    border: 2px solid black !important;
+    border-radius: 8px !important;
+    font-size: 64px !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  
 
 @keyframes roll-dice {
 	0% {
