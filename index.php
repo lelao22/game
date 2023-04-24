@@ -39,6 +39,8 @@
 	<div id="control-panel">
 		<button id="roll-button">Jogar</button>
 	</div>
+    <div id="resultado"></div>
+
 	<script src="game.js"></script>
 </body>
 </html>
